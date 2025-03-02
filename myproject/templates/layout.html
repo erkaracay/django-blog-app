@@ -13,13 +13,16 @@
 <body>
   <nav>
     <a href="/">
-      <span role="img" aria-label="Home">🏠</span>
+      <span role="img" aria-label="Home" title="Home">🏠</span>
     </a> |
     <a href="/about">
-      <spanrole="img" aria-label="About">😃</span>
+      <span role="img" aria-label="About" title="About">ℹ️</span>
     </a> |
     <a href="{% url "posts:list" %}">
-      <spanrole="img" aria-label="Posts">📪</span>
+      <span role="img" aria-label="Posts" title="Posts">📪</span>
+    </a> |
+    <a href="{% url "users:register" %}">
+      <span role="img" aria-label="Register" title="Register">📝</span>
     </a>
   </nav>
   <main>
