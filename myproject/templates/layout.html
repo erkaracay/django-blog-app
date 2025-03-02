@@ -23,7 +23,14 @@
     </a> |
     <a href="{% url "users:register" %}">
       <span role="img" aria-label="Register" title="Register">📝</span>
-    </a>
+    </a> |
+    <a href="{% url "users:login" %}">
+      <span role="img" aria-label="Login" title="Login">🔐</span>
+    </a> |
+    <form class="logout" action="{% url "users:logout" %}" method="POST">
+      {% csrf_token %}
+      <button class="logout-button" type="submit" aria-label="Logout" title="Logout">🚪</button>
+    </form>
   </nav>
   <main>
     {% block content %}
